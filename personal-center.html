@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 首页头部 -->
+    <header class="home-header">
+        <div class="main-header  clearfix">
+            <img class="home-logo" src="./image/home-logo.png" alt="苏州高新区教育时空云">
+            <div class="message" id="message">
+                <a href="#"><img src="./image/message.png" alt="信息"></a>
+                <div class="user-message" id="user_message">
+                    <img src="./image/user (1).png" alt="个人信息">
+                    <span>徐建宇，你好！</span>
+                    <ul class="role-list" id="role_list">
+                        <!-- <li><a href="#"><img src="./image/user.png" alt="">个人中心</a></li> -->
+                        <li><a href="./index.html"><img src="./image/icon-3.png" alt="">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-width">
+        <div class="main-page clearfix">
+            <div class="p-left">
+                <ul class="p-list" id="p_list">
+                    <li class="active">个人中心</li>
+                    <li>修改密码</li>
+                    <li>家长绑定</li>
+                    <li>微信</li>
+                </ul>
+            </div>
+            <div class="p-right" id="p_right">
+                <div class="dis appear p-right-1">
+                    <h2>个人信息</h2>
+                    <p>
+                        <label for="">头像：</label>
+                        <span class="head-port"><img src="./image/touxiang.jpg" alt="">
+                            <input type="file" id="file"></span>
+                        <span class="img-tip">点击头像可以进行更换头像</span>
+                    </p>
+                    <p>
+                        <label for="">用户名：</label>
+                        <span>1233211111111</span>
+                    </p>
+                    <p>
+                        <label for="">姓名：</label>
+                        <span>徐建宇</span>
+                    </p>
+                    <p>
+                        <label for="">学校：</label>
+                        <span>苏州高新区第一初级中学校</span>
+                    </p>
+                    <p>
+                        <label for="">年级：</label>
+                        <span>初一</span>
+                    </p>
+                    <p>
+                        <label for="">班级：</label>
+                        <span>01班</span>
+                    </p>
+                    <p>
+                        <label for="">个人简介:</label>
+                        <span class="add-message"></span>
+                        <textarea class="p-info-area" name="" id="" cols="30" rows="10"></textarea>
+                    </p>
+                    <p>
+                        <label for=""></label>
+                        <button class="compile" id="compile">编辑</button>
+                    </p>
+                    <p class="p-last">
+                        <label for=""></label>
+                        <span><button class="yes"> 确定</button><button class="no">取消</button></span>
+                    </p>
+                </div>
+                <div class="dis p-right-2">
+                    <h2>修改密码</h2>
+                    <p>
+                        <label for="">当前密码：</label>
+                        <input type="password" placeholder="请输入当前密码">
+                        <span></span>
+                    </p>
+                    <p>
+                        <label for="">新密码：</label>
+                        <input type="password" placeholder="请输入新密码">
+                        <span></span>
+                    </p>
+                    <p>
+                        <label for="">确认密码:</label>
+                        <input type="password" placeholder="请确认密码">
+                        <span></span>
+                    </p>
+                    <button>保存</button>
+
+                </div>
+                <div class="dis">
+                    <h2>家长绑定</h2>
+                    <p class="bangding">
+                        <label for="">绑定父亲：</label>
+                        <button id="bangding_btn">去绑定</button>
+                    </p>
+                    <p class="bangding">
+                        <label for="">绑定母亲：</label>
+                        <span>已绑定</span>
+                    </p>
+                    <div class="bind-parent">
+                        <p>
+                            <label for="">是否有账号</label>
+                            <span><input id="account_yes" type="radio" name="account">是</span>
+                            <span><input id="account_no" type="radio" name="account" checked>否</span>
+                        </p>
+                    </div>
+                    <div class="bind-child-no">
+                        <p>
+                            <label for="">姓名：</label>
+                            <input type="text" placeholder="请输入姓名">
+                        </p>
+                        <p>
+                            <label for="">手机号码：</label>
+                            <input type="text" placeholder="请输入号码">
+                        </p>
+                        <p>
+                            <label for="">短信验证码：</label>
+                            <input type="text" placeholder="输入验证码">
+                        </p>
+                        <p>
+                            <label for="">密码：</label>
+                            <input type="text" placeholder="请输入密码">
+                        </p>
+                        <p>
+                            <label for=""></label>
+                            <button id="bind_yes_btn">注册并绑定</button>
+                        </p>
+                    </div>
+                    <div class="bind-child-yes">
+                        <p>
+                            <label for="">账号：</label>
+                            <input type="text" placeholder="请输入账号">
+                        </p>
+                        <p>
+                            <label for="">密码：</label>
+                            <input type="password" placeholder="请输入密码">
+                        </p>
+                        <p>
+                            <label for=""></label>
+                            <button id="bind_no_btn">完成绑定</button>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="dis">微信</div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="common-footer">
+        <p>
+            <a href="#">帮助中心</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">法律信息</a>
+            <span>|</span>
+            <a href="#">隐私中心</a>
+            <span>|</span>
+            <a href="#">联系我们</a>
+        </p>
+        <p>版权所有：中科知图教育科技(苏州)有限公司苏ICP备14022536号 公安部备案号32050502000472</p>
+    </footer>
+
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

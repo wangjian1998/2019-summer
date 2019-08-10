@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+    <title>首页</title>
+</head>
+
+<body>
+
+    <!-- 悬浮头部 -->
+    <header class="home-header">
+        <div class="main-header clearfix">
+            <img class="home-logo" src="./image/home-logo.png" alt="logo图片">
+            <div class="home-log" id="home_log">
+                <a href="#">登录</a>
+                <span>|</span>
+                <a href="./register.html" target="_blank">注册</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 轮播图片 -->
+    <div id="dowebok">
+        <div class="section">
+            <img src="./image/1.jpg" alt="图一">
+            <div class="btn">
+                <a href="#" class="login">登录</a>
+                <a href="./register.html" target="_blank" class="h-register">注册</a>
+            </div>
+        </div>
+        <div class="section">
+            <img src="./image/2.jpg" alt="图二">
+        </div>
+        <div class="section">
+            <img src="./image/3.jpg" alt="图三">
+        </div>
+        <div class="section">
+            <img src="./image/4.jpg" alt="图四">
+        </div>
+        <div class="section">
+            <img src="./image/5.jpg" alt="图五">
+        </div>
+        <div class="section">
+            <img src="./image/6.jpg" alt="图五">
+
+
+        </div>
+    </div>
+    <!-- 下拉按钮 -->
+    <a class="pull-down" id="pull_down"></a>
+    <!-- 首页底部 -->
+    <footer class="home-footer">
+        <p>
+            <a href="#">帮助中心</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">法律信息</a>
+            <span>|</span>
+            <a href="#">隐私中心</a>
+            <span>|</span>
+            <a href="#">联系我们</a>
+        </p>
+        <p>版权所有：中科知图教育科技(苏州)有限公司苏ICP备14022536号 公安部备案号32050502000472</p>
+    </footer>
+
+
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/jquery.fullPage.min.js"></script>
+    <script>
+        $(function () {
+            $('#dowebok').fullpage({
+                afterLoad: function (anchorLink, index) {
+                    if (index == 6) {
+                        $("#pull_down").hide();
+                        $(".home-footer").show();
+                    } else {
+                        $("#pull_down").show();
+                        $(".home-footer").hide();
+                    }
+                    if (index == 1) {
+                        $(".home-log").hide();
+                    } else {
+                        $(".home-log").show();
+                    }
+                },
+                navigation: true,
+                navigationColor: ['#fff'],
+                loopBottom: true,
+                scrollingSpeed: 700,
+            })
+        })
+
+        //点击下拉按钮轮播
+        $('#pull_down').click(function(){
+            clearInterval(timer);
+            $.fn.fullpage.moveSectionDown();
+            setTime();
+        })
+
+        //自动轮播
+         setTime()
+        function setTime(){
+            timer =  setInterval(function () {
+                $.fn.fullpage.moveSectionDown();
+            }, 10000);
+        }
+    </script>
+</body>
+
+</html>
